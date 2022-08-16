@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace NLayerMyApp.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -28,6 +28,12 @@ namespace NLayerMyApp.API.Controllers
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+        }
+
+        [HttpPost]
+        public IActionResult Ekle([FromBody] string name)
+        {
+            return Ok();
         }
     }
 }
