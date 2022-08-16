@@ -16,7 +16,7 @@ namespace NLayerMyApp.Repository
         {
                 
         }
-        //mydeb
+        //mydebdfgdgfgd
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductFeature> ProductFeatures { get; set; }
