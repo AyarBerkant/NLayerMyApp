@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NLayerMyApp.Core.DTOs.Base;
 
-namespace NLayerMyApp.Core
+namespace NLayerMyApp.Core.DTOs.Category
 {
-    public class Category:BaseEntity
+    public class CategoryDto:BaseDto
     {
         public string Name { get; set; }
-        public ICollection<Product> Products { get; set; }
+
     }
 }

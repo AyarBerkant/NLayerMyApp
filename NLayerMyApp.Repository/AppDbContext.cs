@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using NLayerMyApp.Core;
+using NLayerMyApp.Core.Entities;
 using NLayerMyApp.Repository.Configuration;
 
 namespace NLayerMyApp.Repository

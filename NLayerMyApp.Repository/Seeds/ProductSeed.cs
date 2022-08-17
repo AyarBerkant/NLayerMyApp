@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using NLayerMyApp.Core;
+using NLayerMyApp.Core.Entities;
 
 namespace NLayerMyApp.Repository.Seeds
 {
