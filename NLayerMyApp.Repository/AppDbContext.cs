@@ -21,6 +21,11 @@ namespace NLayerMyApp.Repository
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductFeature> ProductFeatures { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(
+                "Data Source=DESKTOP-9HMKFF5;Initial Catalog=NlayerMyApp;User ID=sa;Password=Berkant123*;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
@@ -41,10 +46,23 @@ namespace NLayerMyApp.Repository
                     Width = 300,
                     ProductId = 2
 
+                },
+                new ProductFeature()
+                {
+                    Id = 3,
+                    Colour = "AMavi",
+                    Height = 200,
+                    Width = 300,
+                    ProductId = 2
+
                 }
                 );
 
             base.OnModelCreating(modelBuilder); 
+
+
         }
+
+     
     }
 }
